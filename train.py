@@ -122,11 +122,11 @@ basemodel.save(runPath + '/model.h5')
 
 # save losses as pickle file
 with open(runPath + '/losses.pickle', 'wb') as f:
-    pickle.dump(history.history['loss'], f)
+    pickle.dump(history.losses, f)
 
 
 # plot losses of every batch
-plt.plot(history.history['loss'])
+plt.plot(history.losses)
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('step')
