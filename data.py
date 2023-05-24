@@ -196,3 +196,5 @@ class Unreal_BasicAugmentRGBSequence(Sequence):
             #self.policy.debug_img(batch_x[i], np.clip(DepthNorm(batch_y[i],self.maxDepth)/self.maxDepth,0,1), index, i)
 
         return batch_x, batch_y
+
+    
