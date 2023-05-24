@@ -83,7 +83,7 @@ if args.data == 'nyu': callbacks = get_nyu_callbacks(model, basemodel, train_gen
 if args.data == 'unreal': callbacks = get_nyu_callbacks(model, basemodel, train_generator, test_generator, load_test_data() if args.full else None , runPath)
 
 # Start training
-model.fit_generator(train_generator, callbacks=callbacks, validation_data=test_generator, epochs=args.epochs, shuffle=True)
+model.fit(train_generator, callbacks=callbacks, validation_data=test_generator, epochs=args.epochs, shuffle=True)
 
 # Save the final trained model:
 basemodel.save(runPath + '/model.h5')
